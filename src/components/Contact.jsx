@@ -2,9 +2,9 @@ import { Mail, Github, Linkedin } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="rounded-2xl border border-gray-200 bg-white p-8 sm:p-10 shadow-sm">
+        <div className="rounded-2xl border border-gray-200/70 bg-white/70 p-8 sm:p-10 shadow-sm backdrop-blur">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900">Let’s build something great</h2>
@@ -71,7 +71,7 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700"
+                  className="inline-flex justify-center rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:from-blue-700 hover:to-indigo-700"
                 >
                   Send message
                 </button>

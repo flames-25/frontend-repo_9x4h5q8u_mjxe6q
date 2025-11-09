@@ -26,8 +26,9 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section id="projects" className="relative py-24">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/40 to-transparent" />
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex items-end justify-between mb-10">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">Selected Work</h2>
@@ -43,21 +44,22 @@ export default function Projects() {
               href={link}
               target="_blank"
               rel="noreferrer"
-              className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="group relative overflow-hidden rounded-2xl border border-gray-200/70 bg-white/70 p-6 shadow-sm backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-lg"
             >
-              <div className="flex items-center justify-between">
-                <div className="h-11 w-11 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+              <div className="absolute -top-12 -right-12 h-40 w-40 rounded-full bg-gradient-to-br from-blue-200/60 to-indigo-200/40 blur-2xl" />
+              <div className="relative flex items-center justify-between">
+                <div className="h-11 w-11 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center ring-1 ring-blue-100">
                   <Icon size={20} />
                 </div>
                 <span className="text-xs text-gray-500">Explore</span>
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+              <h3 className="relative mt-4 text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 {title}
               </h3>
-              <p className="mt-2 text-sm text-gray-600">{description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <p className="relative mt-2 text-sm text-gray-600">{description}</p>
+              <div className="relative mt-4 flex flex-wrap gap-2">
                 {tags.map((t) => (
-                  <span key={t} className="rounded-full bg-gray-100 px-2.5 py-1 text-xs text-gray-700">{t}</span>
+                  <span key={t} className="rounded-full bg-gray-100 px-2.5 py-1 text-xs text-gray-700 ring-1 ring-gray-200">{t}</span>
                 ))}
               </div>
             </a>
